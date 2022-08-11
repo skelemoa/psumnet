@@ -90,10 +90,47 @@ The following table compares the perfromance of PSUMNet with other existing meth
 
 
 
-### Code and Pretrained weights
+### Training
+
+## Sytem Requirements
+
+Major requirements are as following,
+
+- Python >= 3.6
+- Pytorch >= 1.1.0
+
+Rest of the requirements are specified in `requirements.txt` and can be installed using `pip install -r requirements.txt`. 
+
+We trained our model using 4 1080Ti GPUs with 12 Gb RAM each.
+
+## Data Preprocessing
+
+We use the same data preprocessing for NTU60 and NTU120 datasets as given by [CTR-GCN](https://github.com/Uason-Chen/CTR-GCN). The path of the pre processed data needs to specified in the config file of that specific dataset.
+
+## Config Files
+
+`./config/` contains the configuration files for all the part based streams (i.e body.yaml, hand.yaml, leg.yaml) for NTU kinect and NTU-X dataset
+
+## Training
+
+Once the data and the config files are set, the model training can be started using the following command,
+
+```
+python main.py --config <path of the config file>
+```
+
+To use the model for inference using pre trained weights, use the following command,
+
+```
+python main.py --config <path of config file> --phase test --weights <path of pre trained weights>
+```
+
+Once the model is trained for all the part streams and thier scores are saved in .pkl files, you can use [ensemble.py](./ensemble.py) file to compute final accuracy by specifying path of these score files.
 
 
-<i>Coming soon...</i>
+## Pretrained weights
+
+<i>We will release the pre trained weights soon.</i>
 
 ## Acknowledgements
 
