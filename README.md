@@ -149,6 +149,8 @@ These extended versions of original NTURGB+d datasets are introduced [here](http
 
 This preprocessing is adopted from [DSTANet](https://github.com/lshiwjx/DSTA-Net)
 
+We also provide already preprocessed data which can be found at [./data/shrec/preprocessed_shrec](./data/shrec/preprocessed_shrec)
+
 <hr/>
 
 ## Config Files

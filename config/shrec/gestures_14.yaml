@@ -1,0 +1,55 @@
+work_dir: ./work_dir/shrec_14_hand/
+logger_dir: ./runs_psumnet_shrec_14_hand/
+
+# feeder
+feeder: feeders.feeder_shrec.Feeder
+train_feeder_args:
+  data_path:  ./data/shrec/preprocessed_shrec/train_skeleton.pkl
+  label_path:  ./data/shrec/preprocessed_shrec/train_label_14.pkl
+  split: train
+  debug: False
+  random_choose: False
+  random_shift: False
+  random_move: False
+  window_size: 64
+  normalization: False
+  random_rot: True
+  p_interval: [0.5, 1]
+  stream: hand
+
+test_feeder_args:
+  data_path:  ./data/shrec/preprocessed_shrec/val_skeleton.pkl
+  label_path: ./data/shrec/preprocessed_shrec/val_label_14.pkl
+  split: test
+  window_size: 64
+  p_interval: [0.95]
+  debug: False
+  stream: hand
+
+# model
+model: model.psumnet.Model
+model_args:
+  num_class: 14
+  num_point: 22
+  num_person: 1
+  graph: graph.shrec.Graph
+  graph_args:
+    labeling_mode: 'spatial'
+  in_channels: 12
+  stream: hand
+
+# weights: weights_path
+
+#optim
+weight_decay: 0.0005
+base_lr: 0.1
+step: [35, 55]
+warm_up_epoch: 5
+
+# training
+device: [0,1,2,3]
+# device: [0]
+batch_size: 64
+test_batch_size: 64
+num_epoch: 200
+nesterov: True

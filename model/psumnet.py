@@ -282,12 +282,12 @@ class Model(nn.Module):
             Graph = import_class(graph)
             self.graph = Graph(**graph_args)
 
-        A = self.graph.A # 3,25,25
-
         if stream == "hand":
             A = self.graph.hand_A
         elif stream == "leg":
             A = self.graph.leg_A
+        elif stream == "body":
+            A = self.graph.A
 
         self.num_class = num_class
         self.num_point = num_point

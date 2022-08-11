@@ -12,4 +12,4 @@ source ~/venv/bin/activate
 
 # module load python/3.6.8
 module load u18/python/3.7.4
-python3 main.py --config config/ntux_configs/body.yaml
+python3 main.py --config config/shrec/gestures_28.yaml
