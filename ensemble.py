@@ -5,6 +5,21 @@ import os
 import numpy as np
 from tqdm import tqdm
 
+'''
+Dataset split wise alpha values
+
+NTU60 Xsub : [2, 1.8, 0.7]
+NTU60 XView : [2.1, 1.6, 0.7]
+
+NTU120 XSub : [2.2, 1.5, 0.7]
+NTU120 XSet : [2.1, 2, 0.8]
+
+NTU60x : [3.4, 2, 1]
+NTU120x : [2.4, 2.2, 1]
+
+'''
+
+
 if __name__ == "__main__":
     
     body_scores_path = "path_body_scores.pkl"
