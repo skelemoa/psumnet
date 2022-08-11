@@ -130,7 +130,7 @@ Once the model is trained for all the part streams and thier scores are saved in
 
 ## Pretrained weights
 
-<i>We will release the pre trained weights soon.</i>
+Pretrained weights and scores for NTU 60/120 Cross Subject split can be found [here](https://drive.google.com/file/d/1St9X0t0PCScgcB4V2Ik9wSBvb7tuvzTC/view?usp=sharing) for body stream.
 
 ## Acknowledgements
 
