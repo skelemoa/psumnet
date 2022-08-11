@@ -144,7 +144,7 @@ These extended versions of original NTURGB+d datasets are introduced [here](http
 <hr/>
 
 ### SHREC3d 
-- Download the SHREC data from (here)[http://www-rech.telecom-lille.fr/shrec2017-hand/]
+- Download the SHREC data from [here](http://www-rech.telecom-lille.fr/shrec2017-hand/)
 - Generate the train/test splits with `python data/shrec/gendata.py`
 
 This preprocessing is adopted from [DSTANet](https://github.com/lshiwjx/DSTA-Net)
