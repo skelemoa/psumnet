@@ -86,6 +86,60 @@ The following table compares the perfromance of PSUMNet with other existing meth
 
 </table>
 
+## Results on [SHREC3d](http://www-rech.telecom-lille.fr/shrec2017-hand/) hand gesture dataset
+
+<table>
+    <tr>
+        <th>Model</th>
+        <th># Params (M)</th>
+        <th>14 Gestures</th>
+        <th>28 Gestures</th>
+    </tr>
+    <tr>
+        <td>Key-Frame CNN</td>
+        <td>7.9</td>
+        <td>82.9</td>
+        <td>71.9</td>
+    </tr>
+    <tr>
+        <td>CNN+LSTM</td>
+        <td>8.0</td>
+        <td>89.8</td>
+        <td>86.3</td>
+    </tr>
+    <tr>
+        <td>Parallel CNN</td>
+        <td>13.8</td>
+        <td>91.3</td>
+        <td>84.4</td>
+    </tr>
+    <tr>
+        <td>STA-Res TCN</td>
+        <td>6.0</td>
+        <td>93.6</td>
+        <td>90.7</td>
+    </tr>
+    <tr>
+        <td>DDNet</td>
+        <td>1.8</td>
+        <td>94.6</td>
+        <td>91.9</td>
+    </tr>
+    <tr>
+        <td>DSTANet</td>
+        <td>14.0</td>
+        <td><b>97.0</b></td>
+        <td><b>93.9</b></td>
+    </tr>
+    <tr>
+        <td><b>PSUMNet</b></td>
+        <td><b>0.9</b></td>
+        <td>95.5</td>
+        <td>93.1</td>
+    </tr>
+
+</table>
+
 <hr/>
 
 
