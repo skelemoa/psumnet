@@ -1,0 +1,55 @@
+work_dir: ./work_dir/ntu60_xsub_hand/
+logger_dir: ./runs_psumnet_ntu60_xsub_hand/
+
+# feeder
+feeder: feeders.feeder_ntu.Feeder
+train_feeder_args:
+  data_path:  #/train_data_path/
+  label_path:  #/train_label_path/
+  split: train
+  debug: False
+  random_choose: False
+  random_shift: False
+  random_move: False
+  window_size: 64
+  normalization: False
+  random_rot: True
+  p_interval: [0.5, 1]
+  stream: hand
+
+test_feeder_args:
+  data_path:  #/test_data_path/
+  label_path:  #/test_label_path/
+  split: test
+  window_size: 64
+  p_interval: [0.95]
+  debug: False
+  stream: hand
+
+# model
+model: model.psumnet.Model
+model_args:
+  num_class: 60
+  num_point: 13
+  num_person: 2
+  graph: graph.ntu_rgb_d.Graph
+  graph_args:
+    labeling_mode: 'spatial'
+  in_channels: 12
+  stream: hand
+
+# weights: weights_path
+
+#optim
+weight_decay: 0.0005
+base_lr: 0.1
+step: [35, 55]
+warm_up_epoch: 5
+
+# training
+device: [0,1,2,3]
+# device: [0]
+batch_size: 200
+test_batch_size: 200
+num_epoch: 200
+nesterov: True
