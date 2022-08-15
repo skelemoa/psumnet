@@ -2,7 +2,6 @@
 Official pytorch implementation for PSUMNet for skeleton action recognition. Accepted at [ECCV 2022 WCPA](https://sites.google.com/view/wcpa2022/)
 
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/psumnet-unified-modality-part-streams-are-all/skeleton-based-action-recognition-on-ntu-rgbd)](https://paperswithcode.com/sota/skeleton-based-action-recognition-on-ntu-rgbd?p=psumnet-unified-modality-part-streams-are-all)
-
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/psumnet-unified-modality-part-streams-are-all/skeleton-based-action-recognition-on-ntu-rgbd-1)](https://paperswithcode.com/sota/skeleton-based-action-recognition-on-ntu-rgbd-1?p=psumnet-unified-modality-part-streams-are-all)
 
 ![](static/PSUMNet_teaser_image.png)
